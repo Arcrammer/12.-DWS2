@@ -1,0 +1,236 @@
+/*  Alexander Rhett Crammer
+    Tuesday, 6 January, 2015
+    Week One Project - 1    */
+
+/* TODO: Convert pixel widths, margins and padding to percentages  */
+
+/* Setting default values for all elements */
+*
+    {font-family: "Didot", "Baskerville", serif;
+    margin: 0 ;
+    padding: 0 ;}
+
+/* Primitive containers */
+body
+    {padding-bottom: 7% ;} /* This will prevent the bottom bar from obfuscating the view of content */
+
+.container
+    {margin: auto ; /* Centre the containing <div> */
+    overflow: auto ; /* Elements with a float will be accounted for when the browser renders the size of .container */
+    width: 1024px ;} /* Consume 1024 pixels of space horizontally */
+    
+/*  Of course I could have set 1024px for the width of the body element, but I'm pretty sure I've read it's bad practice
+    to do so, and to do that would also mean my banner image wouldn't stretch to fit the entire viewport.  */
+
+/* Navigation */
+nav
+    {background-color: rgba(255,255,255,0.95);
+    border-top: 1.75px solid rgba(128,128,128,0.7);
+    position: fixed ; /* The bottom bar will always be at the bottom of the page */
+    bottom: 0 ;
+    left: 0 ;
+    right: 0 ;}
+
+nav a
+    {font-family: "Helvetica Neue", Helvetica, sans-serif ;}
+
+
+nav ul:nth-child(1) /* We're only going to apply these styles to the first unordered list within a nav element */
+    {list-style-type: none ;
+    text-align: center ;} /* Center the list of links in the bottom bar */
+
+nav li
+    {display: inline-block ; /* Prefer bottom bar links inline, as opposed to stacking */
+    padding: 1.46484375em ;} /* Add whitespace surrounding bottom bar links */
+
+/* Navigation links */
+nav a:link
+    {color: #007AFF ;
+    text-decoration: none;}
+nav a:visited
+    {color: #007AFF ;
+    text-decoration: none;}
+nav a:hover
+    {color: #007AFF ;
+    text-decoration: none;}
+nav a:active
+    {color: #0061c7 ;
+    text-decoration: none;}
+
+/* Content */
+h1
+    {padding: 0.87890625em ; /* Surround level one headers with 25 pixels of whitespace */
+    text-align: center ;}
+
+img
+    {border-radius: 20px ; /* Add rounded corners to the image */
+    width: 100% ;}
+
+img[src$="Banner.png"]
+    {border-radius: 0px ; /* Remove the rounded corners */
+    width: 100% ;}
+
+img[src$="SubwayMap.png"]
+    {margin-top: 0.306122449% ;}
+
+#gallery figure
+	{margin: 0.4em ;
+	width: 90% ;}
+
+td
+	{vertical-align: top ; /* Pull the images all the way to the top of the cells */
+	width: 50% ;} /* Allow figures an equal amount of space */
+
+section, aside
+    {float: left ;
+    margin: 0.625em ;
+    width: 47.8515625% ;}
+
+section > h2:first-of-type
+    {font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.125em ;
+    font-style: italic ;
+    font-weight: 500 ;
+    margin-left: 3.1666666667% ;}
+
+p
+    {font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 0.875em ;
+    line-height: 1.45em ;
+    margin: 3.2666666667% ;}
+
+h2 + p
+    {margin-top: 0.458em ;
+    /* The first paragraph of each column will have a top margin shorter than the others */}
+
+figcaption
+    {color: gray ;
+    font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 0.750em ;
+    font-weight: 300 ;
+    margin-top: 0.1020408163% ;
+    text-align: center ;}
+
+/* Media queries */
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 414px)
+    /* Begin iPhone to iPhone 6 Plus */ {
+        
+        /* Primitive containers */
+        .container
+            {width: 100% ;} /* We don't want to take 1024px any longer, we'd instead like to use the viewport width */
+        
+        /* Content */
+        h1, img[src$="Banner.png"]
+            {padding: 25px 0 0 ;} /* Move the title and banner down a bit */
+        
+        section > h2
+            {padding: 15px 0 0 10px ;}
+    
+        section, aside
+            {margin: 0 ;
+            padding: 0 ;
+            width: 100% ;}
+    
+        p, figure
+            {margin: 15px ;}
+    
+        section p:last-child
+            {margin-bottom: 0 ;}
+        
+        section:last-of-type
+            {padding-bottom: 65px ;} /* This will prevent the bottom bar from obfuscating the view of content */
+    } /* End iPhone to iPhone 6 Plus */
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 414px)
+    and (orientation: portrait)
+    /* Begin iPhone to iPhone 6 Plus (Portrait) */ {
+
+        nav ul
+            {padding: 0.5em ;}
+
+        nav li
+            {font-size: 0.938em ;
+            padding: 0.732421875em ;}
+    } /* End iPhone to iPhone 6 Plus (Portrait) */
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 414px)
+    and (orientation : landscape)
+    /* Begin iPhone to iPhone 6 Plus (Landscape) */ {
+        
+        /* Primitive containers */
+        body
+            {padding-bottom: 75px ;}
+        
+        .container
+            {width: 95% ;}
+        
+        /* Content */
+        section
+            {width: 50% ;} /* Display two columns */
+    } /* End iPhone to iPhone 6 Plus (Landscape) */
+
+@media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait)
+    /* Begin iPad (Portrait) */ {
+    
+        /* Primitive containers */
+        body
+            {padding-bottom: 75px ;}
+        
+        .container
+            {width: 100% ;} /* We don't want to take 1024px any longer, we'd instead like to use the viewport width */
+        
+        /* Content */
+        h1, img[src$="Banner.png"]
+            {padding: 25px 0 0 ;} /* Move the title and banner down a bit, while also removing side and bottom padding */
+        
+        section > h2
+            {padding: 15px 0 0 10px ;}
+    
+        section, aside
+            {margin: 0 ;
+            padding: 0 ;
+            width: 50% ;} /* Consume half of the space available */
+    
+        p, figure
+            {margin: 15px ;}
+    
+        section p:last-child
+            {margin-bottom: 0 ;}
+        
+        section:last-of-type
+            {padding-bottom: 65px ;}
+    } /* End iPad (Portrait) */
+
+@media only screen
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : landscape)
+    /* Begin iPad (Landscape) */ {
+        
+        /* Primitive containers */
+        body
+            {padding-bottom: 50px ;}
+        
+        .container
+            {width: 100% ;} /* We don't want to take 1024px any longer, we'd instead like to use the viewport width */
+        
+        /* Content */
+        section
+            {margin: 0 ;
+            padding: 25px ;
+            width: 45.1171875% ;}
+    } /* End iPad (Landscape) */
+
+/* Fonts */
+@font-face
+    {font-family: Didot ;
+    src: url("Assets/Fonts/Didot-Regular.ttf") ;}

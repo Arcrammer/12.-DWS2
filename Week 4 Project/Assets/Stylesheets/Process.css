@@ -1,0 +1,31 @@
+/*  Alexander Rhett Crammer
+    Sunday 25 January, 2015
+    Week 4 Project  */
+
+/* Primitive Containers */
+.container
+    {margin: 10% auto 0;
+    text-align: center;
+    width: 40%;}
+
+/* Content */
+p
+    {font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 20pt;
+    font-weight: 200;
+    margin-top: 5%;}
+
+p:nth-child(1n+3)
+    {font-size: 16pt;
+    margin-top: 15%;}
+
+p:nth-child(3)
+    {font-size: 26pt;
+    transform: rotate(90deg);
+    transition: transform 3s;}
+
+@media only screen
+    and (max-width: 700px) {
+        .container
+            {width: 75%;}
+    }

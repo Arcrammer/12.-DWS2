@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Week Three Project</title>
+    <!-- Metadata -->
+        <meta name="author" content="Alexander Rhett Crammer" />
+        <meta name="description" content="Week 3 Project" />
+        
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!-- Links -->
+	   <link rel="stylesheet" href="Assets/Stylesheets/Main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <section>
+            <!-- The entire form will be in this <section> -->
+                <form action="process.html" method="post" id="mainForm">
+                <!-- I'll be using 'tel' for 'number' fields for two reasons. Safari for iOS doesn't display the numberpad for 'number' and 'tel' only removed line breaks are enforced syntactically. 'tel' will display the number pad within Web View's throughout iOS and possibly other devices, which is more applicable because symbols aren't needed for this phone number due to the segmented text fields. -->
+                    <div>
+                        <label for="fullName">Full Name: </label><input type="text" id="fullName" /><br />
+                        <label for="emailAddress">Email: </label><input type="email" id="emailAddress" /><br />
+                        <label for="password">Password: </label><input type="password" id="password" /><br />
+                        <label for="passwordVerification">Confirm: </label><input type="password" id="passwordVerification" /><br />
+                        <label for="birthdate">Birth: </label><input type="date" id="birthdate" /><br />
+                    </div> <!-- First Singleton -->
+                    <div>
+                        <label for="favouriteColour">Favourite Colour: </label><input type="color" id="favouriteColour" value="#fc3ba6" /><br />
+                        <label for="selfie">Selfie: </label><input type="file" id="selfie" accept="image/jpeg, image/png" /><br />
+                        <label for="cardDigits">Card: </label><input class="card" type="tel" id="cardDigits" /><input class="card" type="tel" /><input class="card" type="tel" /><br />
+                        <label for="csc">CSC: </label><input type="tel" id="csc" /><br />
+                        <label>Vendor: </label>
+                        <select >
+                            <option>Visa</option>
+                            <option>MasterCard</option>
+                            <option>American Express</option>
+                            <option>Other</option>
+                        </select>
+                    </div> <!-- Second Singleton -->
+                    <div>
+                        <label for="tele">Tele (Optional): </label><input type="tel" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}" id="tele" /><br />
+                        <label for="site">Site: </label><input type="url" /><br /><br />
+                        I agree to the terms and conditions<br />
+                        <label for="yes">Yes </label><input type="radio" name="termsRadio" id="yes" /><label for="no">No </label><input type="radio" name="termsRadio" id="no"/><br />
+                        <input type="checkbox" id="emailSubscription" /><label for="emailSubscription">Subscribe to weekly emails</label>
+                        <input type="range" min="0.0" max="1.0" step="0.25" value="0.0" /><br />
+                        <label>I'd like to receive special offers only</label><br />
+                    </div> <!-- Last (Third) Singleton -->
+                </form>
+            </section>
+            <div class="submitButtonArea">
+            <!-- This should be in a <div> seperate from the <section> containing the form because it won't be part of the form -->
+                <input type="submit" value="Submit" form="mainForm" />
+            </div> <!-- .submitButtonArea -->
+        </div> <!-- .container -->
+    </body>
+</html>

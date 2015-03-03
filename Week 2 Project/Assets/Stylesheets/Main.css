@@ -1,0 +1,169 @@
+/*  Alexander Rhett Crammer
+    Saturday, 10 January, 2015
+    Week Two Project
+    Create a site about a random topic using either Bootstrap or Foundation.
+    I've chosen to use Bootstrap for this assignment.  */
+
+/* Primitive containers */
+body
+    {background-color: rgb(250,250,250);
+    padding: 10px !important ;} /* Just to make sure all of the content doesn't touch the viewport edge */
+    /* Side note: I don't know what happened here. First launch on iPhone 6 displayed whitespace around
+       the jumbotron, but after editing a bit I'd noticed that the jumbotron began to stretch 100% in
+       the viewport. I don't know where this is being applied, but declaring !important here prevents it. */
+
+/* Links */
+a:link {color: #ff66b8 ;text-decoration: none ;}
+a:visited {color: #ff66b8 ;text-decoration: none ;}
+a:hover {color: #ff40a6 ;text-decoration: none ;}
+a:active {color: #992663 ;text-decoration: none ;}
+
+/* Content */
+.jumbotron
+    {border-radius: 0px !important ;}
+
+nav li
+    {line-height: 2.0em ;
+    padding: 0.5em ;}
+
+.navbar-header .page-header
+    {display: none ;} /* Hide the navigation header initially */
+
+#collapse ul li
+    {border: 0.05em solid silver ;
+    margin-bottom: 0.5em ;}
+
+.alert
+    {margin: 1.631578947em auto ;
+    width: 87.01030928% ;}
+
+img
+    {border-radius: 0.5em ;
+    width: 100% ;}
+
+img[src$="Peanut%20Butter%20Chocolate%20Chip%20Oatmeal%20Cookies.jpg"] /* Target the featured cookie image */
+    {margin-bottom: 0.15em ;} /* Push following content away from the bottom */
+
+label
+    {margin-right: 1.5em ;} /* Push things to the right of form labels */
+
+h2, button
+    {margin: 2.5em !important ;}
+
+/* Form */
+form
+    {text-align: center ;}
+
+.formFields ul
+    {margin: 0 ;
+    padding: 0 ;}
+
+.formFields li
+    {list-style-type: none ; /* Use no bullets or any of that stuff */
+    margin-top: 1.5em ;}
+
+.formFields input[type="text"], input[type="number"]
+    {height: 3em ;
+    text-align: center ;}
+
+.formFields input[type="checkbox"]
+    {margin-right: 1.2em ;}
+
+.tickbox:first-child, .tickbox:last-child
+    {line-height: 0.5em ;} /* Push form tickboxes away from each other vertically a bit */
+
+.formFields input[type="number"]
+    {width: 20% ;}
+
+.entireForm input:nth-child(9) /* Target the "Submit" button of the form */
+    {margin: 3.5em ;}
+
+label[for="state"] + input
+    {padding-left: 1.5em ;}
+
+.total
+    {margin: 3.5em 0 ;}
+
+.total .well
+    {background-color: #fff ;
+    padding: 1.5em 3.5em ;}
+
+.list-group li
+    {margin: 0 ;
+    padding: 1.5em ;}
+
+/* Tint */
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:hover, .btn-primary, .btn-primary:hover
+    {background-color: #5D00C5 !important ; /* Set the tint of form elements */
+    border-color: #5D00C5 !important ;}
+
+.list-group-item.active:hover, .btn-primary:active
+    {background-color: #43048b !important ; /* Set the tint of form elements on hover and active */
+    border-color: #43058b !important ;}
+
+/* Table cells */
+.gallery img
+    {margin: 15px ;} /* Gallery spacing */
+
+/* Media queries */
+/* iPhone 4S to iPhone 6 Plus in Portrait */
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 667px)
+    and (orientation: portrait) {
+        body
+            {padding: 1.5em 0 ;} /* Viewport insets appear to match horizontal and vertical */
+        .alert
+            {margin: 0.651578947em auto ;
+            width: 97.01030928% ;}
+        .formFields ul
+            {text-align: center ;}
+        .formFields div
+            {margin: 1.5em auto ;}
+        #quantity
+            {margin: 1.5em auto ;}
+    }
+
+/* iPhone 4S to iPhone 6 Plus in Landscape */
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 667px)
+    and (orientation: landscape) {
+        .alert
+            {margin: 0 auto 0.651578947em ;
+            width: 100% ;}
+        body
+            {padding: 1.5em 0 ;} /* Viewport insets appear to match horizontal and vertical */
+        .formFields ul
+            {text-align: center ;}
+        .formFields div
+            {margin: 1.5em auto ;}
+        #quantity
+            {margin: 1.5em auto ;}
+    }
+
+/* Tablet in portrait */
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait) {
+        .formFields
+            {margin: auto ;
+            width: 50% ;}
+        .formFields div
+            {margin-top: 10% ;
+            width: 100% ;}
+        nav li
+            {line-height: 2.0em ;}
+    }
+
+@media only screen
+    and (max-width: 768px) {
+        h2
+            {font-size: 1.5em ;}
+        .navbar-header .page-header h2
+            {display: inline ;
+            line-height: 4em ;}
+        .list-group
+            {margin-top: 1.5em ;}
+    }

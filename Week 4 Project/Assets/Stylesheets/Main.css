@@ -1,0 +1,488 @@
+/*  Alexander Rhett Crammer
+    Friday, 23 January, 2015
+    Week Four Project   */
+
+* {
+    color: #fff; /* Set all text to #fff */
+    margin: 0; /* Clear margins */
+    padding: 0; /* Clear padding */
+    text-decoration: none; /* Remove underlines from links and any other default text decorations */
+}
+
+/* Primitive Containers */
+body
+    {background-color: rgba(0,0,0,0.925);
+    color: #fff;
+    margin: 0;
+    padding: 0;}
+
+.container
+    {margin: 8.700696056% auto 2.9002320187%;
+    overflow: auto;
+    width: 80%;}
+
+/* Content */
+section
+    {float: left;
+    width: 100%;}
+
+h2
+    {font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    text-indent: 3.719447396%;} /* Push over section headers */
+
+p
+    {float: left;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 0.85em;
+    margin: 2.298850575%;
+    width: 45.40229885%;}
+
+button
+    {border-radius: 0.3533568905em !important;
+    margin: auto;
+    transform: scale(0.9,0.9); /* Make the button a bit smaller */
+    transition: transform 100ms ease-out;} /* Animate the change */
+
+button:active
+    {transform: scale(0.85,0.85); /* Make the button a bit smaller */
+    transition: transform 100ms ease-out;} /* Animate the change */
+
+.largeButton
+    {background-color: #df2e90;
+    display: block;
+    color: #fff;
+    border: 0;
+    border-radius: 0.9433962264em;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.2em;
+    font-weight: 200;
+    padding: 5.102040816% 8.37755102%;
+    margin: 3.826530612% auto;
+    outline: none;
+    transition: background-color 175ms;} /* Animate the background-color change */
+
+.largeButton:hover
+    {cursor: pointer; /* This insists to the user that the button has an action */
+    background-color: #b51a70;
+    transition: background-color 175ms;} /* Animate the background-color change */
+
+/* Navigation */
+nav
+    {background-color: rgba(0,0,0,0.85);
+    overflow: hidden;
+    position: fixed; /* We'll have the navigation bar at the top of the viewport at all times */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;} /* We'll want it to be 100% wide */
+
+nav ul
+    {list-style-type: none; /* Hide those default bullets */
+    overflow: auto;}
+
+nav li
+    {display: inline; /* For the float properties */
+    float: right;
+    font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.125em;
+    font-weight: 300;
+    margin: 0 1.209189843%;
+    padding: 1.813784764% 3.022974607%;}
+
+nav li:first-child
+    {float: left;
+    margin: 0;
+    padding: 0;
+    position: relative; /* We'll tweak the title position a bit */
+    top: 0.5em;
+    left: 2.319109462em;}
+
+nav a
+    {text-decoration: none;} /* Remove the default text-decoration for anchors in the <nav> element */
+
+nav a:link
+    {color: white;
+    transition: color 75ms;} /* Animate the color change */
+nav a:visited
+    {color: white;
+    transition: color 75ms;}
+nav a:hover
+    {color: #aaa;
+    transition: color 275ms;}
+nav a:active
+    {color: #777;
+    transition: color 75ms;}
+
+header
+    {font-family: "Geneva", "Arial", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    transform: skew(-5deg,-5deg) rotate(3.5deg);} /* Convert the letters to uppercase */
+
+.menu
+    {display: none;} /* We'll hide this pancake button by default because we only want it for viewports under 759px wide */
+
+/* Gallery */
+.gallery
+    {margin: 2.301495972% auto;}
+
+.gallery img
+    {width: 100%;}
+
+.gallery figure
+    {float: left;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 0.85em;
+    font-weight: 200;
+    overflow: auto;
+    margin: 1.670378619%;
+    transition: margin 300ms ease, width 300ms ease; /* Animate the changes of margin and width properties */
+    width: 46.51972158%;}
+
+.gallery figure:hover
+    {margin: 0;
+    transition: margin 300ms ease, width 300ms ease;
+    width: 50%;}
+
+.gallery figcaption
+    {margin: 1.915451895% 0;}
+
+/* Panorama */
+#panorama
+    {width: 100%;}
+
+iframe
+    {border: 0;
+    display: block; /* This will allow us to center it with 'auto' side margins */
+    margin: 1.758499414% auto 2.930832356%;}
+
+/* Form */
+form
+    {overflow: auto;} /* I don't remember why I have these 'overflow' properties about but I always make them for some reason. There's probably a good reason this is here which wouldn't be immediately clear even if you remove it so yeah I'm just going to go with it. */
+
+.formColumn
+    {font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 0.9em;
+    font-weight: 200;
+    float: left; /* This will give us that column layout we're after */
+    letter-spacing: 0.01937984496em; /* I thought the default was a bit cramped */
+    margin: 1.10864745%;
+    overflow: auto;
+    text-align: right; /* This will align our form fields neatly */
+    width: 31.11603843%;}
+
+.formColumn button[type="button"]
+    {display: inline;
+    margin: 10.5300353357% 12.36749117%;}
+
+input
+    {background-color: rgba(255,255,255,0.85);
+    border-color: rgba(255,20,147,0.8);
+    border-width: 0.17067137809em;
+    color: #222;
+    font-size: 1.0em;
+    font-weight: 300;
+    margin: 5.196721311% 1.766784452%;
+    outline: none;
+    padding: 3.533568905%;
+    text-align: right;
+    vertical-align: middle; /* Center input elements vertically */
+    width: 44.74708171%;}
+
+input:focus
+    {border-color: rgba(255,0,255,0.8);
+    color: rgba(255,20,147,0.8);
+    font-family: "Times New Roman", serif;
+    font-style: italic;}
+
+input[type="range"]
+    {background-color: transparent; /* When customising this element type we're given an ugly full-size background as if this were a text field, so we'll clear that */
+    -webkit-appearance: none;} /* Tells webkit we don't want anything to do with the default style */
+
+input[type="range"]::-webkit-slider-runnable-track /* Range track */
+    {background-color: #df2e90;
+    height: 0.07067137809%;}
+
+input[type="range"]::-webkit-slider-thumb /* Range thumb */
+    {-webkit-appearance: none; /* Again, telling webkit to forget about that default style */
+    background-color: #444;
+    border: 0.12533568905em solid gray;
+    border-radius: 70.67137809%;
+    height: 0.8163265306em;
+    margin: -0.3401360544em;
+    width: 0.8163265306em;}
+
+input[type="date"]
+    {padding: 3.533568905% 0;
+    width: 50%;}
+
+#starAmount, #flightClassLabel
+    {display: block;
+    margin: auto;
+    margin-right: 3.521126761%;
+    text-align: center;
+    width: 50%;}
+
+/* Footer */
+footer
+    {clear: both;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    font-size: 0.8em;
+    padding-top: 1.375137514%;
+    text-align: center;
+    width: 100%;}
+
+/* Media Queries */
+@media only screen
+    and (max-width: 759px) {
+        /* iPhone 6 Plus below */
+        
+        /* Primitive Containers */
+        .container
+            {padding-top: 18.20728291%;
+            width: 95%;} /* I think things feel better on smaller screens when they're a bit more thin most of the time, especially */
+        
+        /* Content */
+        p
+            {clear: both;
+            width: 95%;}
+        
+        .largeButton
+            {font-weight: 400;} /* Make it thick */
+        
+        /* Navigation */
+        nav
+            {height: 3.7951447247em;}
+        
+        nav ul
+            {overflow: auto;
+            margin: 5.602240896% auto;}
+        
+        nav li:nth-child(1n+2) /* This will effect all list items except the first */
+            {clear: left;
+            display: none;
+            margin: 1.404494382% 0;
+            padding: 0;
+            text-align: center;
+            width: 100%;}
+        
+        nav li:first-child /* Header */
+            {position: relative; /* Tweak the title position in the <nav> element */
+            top: -0.4201680672em;
+            left: 0.4em;}
+        
+        .menu
+            {background: #333 url("../Images/Pancakes.png") no-repeat center; /* Bake the pancakes for the 759px-below menu button */
+            border: 0;
+            color: #fff;
+            display: block; /* I'm pretty sure it's 'inline' by default which messes things up, basically. */
+            padding: 5.333333333%;
+            position: absolute; /* Squish it up to the corner */
+            top: 1.1666666668em;
+            right: 1.1666666668em;}
+        
+        /* Navigation Links */
+        nav li:nth-child(1n+2) a /* Anchors within list items exclusing the header */
+            {display: block;
+            padding: 0.5833333334em 0;}
+        
+        nav li:nth-child(1n+2) a:link /* We'll set link colours for different states */
+            {background-color: rgb(64,64,64);}
+        
+        nav li:nth-child(1n+2) a:visited
+            {background-color: rgb(64,64,64);}
+        
+        nav li:nth-child(1n+2) a:hover
+            {background-color: rgb(48,48,48);
+            color: #fff;}
+        
+        nav li:nth-child(1n+2) a:active
+            {background-color: rgb(32,32,32);
+            color: #fff;
+            font-style: italic;}
+        
+        /* Gallery */
+        .gallery figure
+            {margin: 2.702702703% 0;
+            transition: none; /* Reset the transition to prevent scaling effects set earlier */
+            width: 100%;} /* Make them consume all space */
+        
+        .gallery figure:hover
+            {margin: 2.702702703% 0;
+            width: 100%;}
+        
+        .gallery figcaption
+            {text-indent: 5%;}
+        
+        /* Panorama */
+        iframe
+            {height: 100%;
+            width: 100%;}
+        
+        /* Form */
+        .formColumn
+            {width: 100%;}
+        
+        /* Footer */
+        footer
+            {margin: auto;
+            width: 75%;}
+    }
+
+@media only screen
+    and (min-width: 1400px) {
+        /* Larger Desktop */
+        /* Gallery */
+        table
+            {width: 100%;}
+    }
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 414px)
+    and (orientation: portrait) {
+        /* iPhone 3G to iPhone 6 Plus (Portrait) */
+        
+        /* Primitive Containers */
+        .container
+            {padding-top: 18.20728291%;
+            width: 95%;} /* I think things feel better on smaller screens when they're a bit more thin most of the time, especially */
+        
+        /* Content */
+        p
+            {clear: both;
+            width: 95%;}
+        
+        .largeButton
+            {font-weight: 400;} /* Make it thick */
+        
+        /* Navigation */
+        nav
+            {height: 3.7951447247em;}
+        
+        nav ul
+            {overflow: auto;
+            margin: 5.602240896% auto;}
+        
+        nav li:nth-child(1n+2) /* This will effect all list items except the first */
+            {clear: left;
+            display: none;
+            margin: 1.404494382% 0;
+            padding: 0;
+            text-align: center;
+            width: 100%;}
+        
+        nav li:first-child /* Header */
+            {position: relative; /* Tweak the title position in the <nav> element */
+            top: -0.4201680672em;
+            left: 0.4em;}
+        
+        .menu
+            {background: #333 url("../Images/Pancakes.png") no-repeat center; /* Bake the pancakes for the 759px-below menu button */
+            border: 0;
+            color: #fff;
+            display: block; /* I'm pretty sure it's 'inline' by default which messes things up, basically. */
+            padding: 5.333333333%;
+            position: absolute; /* Squish it up to the corner */
+            top: 1.1666666668em;
+            right: 1.1666666668em;}
+        
+        /* Navigation Links */
+        nav li:nth-child(1n+2) a /* Anchors within list items exclusing the header */
+            {display: block;
+            padding: 0.5833333334em 0;}
+        
+        nav li:nth-child(1n+2) a:link /* We'll set link colours for different states */
+            {background-color: rgb(64,64,64);}
+        
+        nav li:nth-child(1n+2) a:visited
+            {background-color: rgb(64,64,64);}
+        
+        nav li:nth-child(1n+2) a:hover
+            {background-color: rgb(48,48,48);
+            color: #fff;}
+        
+        nav li:nth-child(1n+2) a:active
+            {background-color: rgb(32,32,32);
+            color: #fff;
+            font-style: italic;}
+        
+        /* Gallery */
+        .gallery figure
+            {margin: 2.702702703% 0;
+            transition: none; /* Reset the transition to prevent scaling effects set earlier */
+            width: 100%;} /* Make them consume all space */
+        
+        .gallery figure:hover
+            {margin: 2.702702703% 0;
+            width: 100%;}
+        
+        .gallery figcaption
+            {text-indent: 5%;}
+        
+        /* Panorama */
+        iframe
+            {height: 100%;
+            width: 100%;}
+        
+        /* Form */
+        .formColumn
+            {width: 100%;}
+        
+        /* Footer */
+        footer
+            {margin: auto;
+            width: 75%;}
+    }
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 414px)
+    and (orientation: landscape) {
+        /* iPhone 3G to iPhone 6 Plus (Landscape) */
+        
+        /* Primitive Containers */
+        .container
+            {padding-top: 6.0690943033%;
+            width: 95%;} /* Again, thinning it out a bit */
+        
+        .largeButton
+            {font-weight: 400;} /* Make it thicksies */
+        
+        /* Navigation */
+        nav
+            {height: 6.5902894494em;}
+        
+        nav ul
+            {overflow: auto;
+            margin: 5.602240896% auto;
+            width: 80%;}
+        
+        nav li:first-child /* Header */
+            {position: relative; /* Tweak the title position in the <nav> element */
+            top: -0.4201680672em;
+            left: 0;}
+        nav li:nth-child(2)
+            {margin-top: 15%;} /* Push the menu down in landscape */
+    }
+
+@media only screen
+    and (max-device-width: 1024px)
+    and (orientation: portrait) {
+        /* iPad and lower (Portrait) */
+        
+        /* Navigation */
+        nav li:first-child /* Header */
+            {font-size: 0.8em;
+            margin-top: 0.4201680672em;}
+        
+        /* Content */
+        button
+            {font-weight: 400 !important;}
+        
+        /* Panorama */
+        iframe
+            {width: 100%;}
+    }

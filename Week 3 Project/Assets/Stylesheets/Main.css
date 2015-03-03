@@ -1,0 +1,215 @@
+/*  Alexander Rhett Crammer
+    Friday, 16 January, 2015
+    Week 3 Project  */
+
+/* Primitive Containers */
+body, .container
+    /* These properties will be changed with the media queries ('Media Queries') for browsers which support media queries */
+    {font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    width: 100%;}
+
+.container
+    {background-color: rgba(255,255,255,0.9);
+    margin: 1.46484375% auto;}
+
+/* Form Elements */
+form
+    {overflow: auto;
+    text-align: right;}
+
+form > div
+    {float: left; /* This line says each of the three columns of the form should display aside each other */
+    padding: 1.739130435%;
+    width: 29.85507246%;}
+
+label
+    {color: #444;
+    margin-right: 5%;}
+
+label[for="no"]
+    {margin-left: 10%;} /* Push the 'Yes' radio button to the left a bit */
+
+/* Input */
+input
+    {border: 0.15em solid silver;
+    color: #555;
+    font-family: "Times New Roman", serif;
+    font-size: 1.0em;
+    font-style: italic;
+    line-height: 2.5em;
+    margin: 8% 0;
+    text-indent: 8.5% ;} /* Push the input field text to the right a bit */
+
+input:focus
+    {background-color: rgba(250,250,250,0.9);
+    color: #c4458b;}
+
+input[type="checkbox"]
+    {margin-right: 5.5%;} /* We'll push the labels to the right a bit for tickboxes */
+
+input[type="file"]
+    {border: 0;
+    font-size: 8.5333333333%;
+    line-height: normal; /* Prevent the line of text the browser renders from misaligning with the button */
+    margin: 8% 0 8% 0.48828125%;}
+
+input[type="radio"]
+    {margin: 4% 8% 4% -2%;}
+
+input[type="date"]
+    {width: 35%;} /* Prevent the default placeholder from clipping */
+
+input[type="range"]
+    {border: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 1.5%;
+    width: 70%;}
+
+input:invalid
+    {background-color: rgba(255,0,0,0.15);
+    transition: background-color 250ms;} /* This will be applied to all fields which don't match the regular expression provided */
+
+input[type="submit"]:hover
+    {transform: scale(1.5,1.5);
+    transition: transform 375ms 0ms ease-in-out;}
+
+input[type="submit"]:active
+    {background-color: #c4458b;
+    transform: scale(1.10,1.10);
+    transition: transform 125ms 0ms ease-in-out, background-color 125ms 0ms ease-in-out;}
+
+div input:nth-child(10) /* Last .card element */
+    {margin-right: 0;} /* Pull the element over to align it with the others */
+
+/* Media Queries */
+@media only screen
+    and (max-width: 700px) {
+        /* Mobile size but most likely not applicable to all mobile devices */
+        
+        /* Primitive Contianers */
+        .container
+            {width: 90%;}
+        
+        /* Form Elements */
+        form
+            {padding-bottom: 20%; /* Compensates for the submit button which is fixed in position */
+            width: 90%;} /* Pull the form in a bit from the sides of the viewport */
+        form > div
+            {float: none ; /* Remove float */
+            padding: 0; /* Clear the padding */
+            width: 100%;} /* Reset the width to consume all available space */
+        .card
+            {margin: auto 1.2%;
+            width: 14.22%;} /* We'll have three 'input' elements with this class inline with eachother */
+        
+        /* Input */
+        input
+            {border: 0.1em solid #eaeaea;
+            line-height: 2em; /* Shorten input field heights */
+            margin: 4% 0;}
+            
+        input[type="submit"]
+            {background-color: #fff;
+            color: #444;
+            line-height: normal; /* Fixes an undesirable setting which pushes the text out of the button */
+            position: fixed; /* We'll have this button at the bottom of the viewport constantly */
+            bottom: 2.5%;
+            left: 25%;
+            right: 25%;
+            z-index: 1;} /* We'll also like to have this submission button above all other elements */
+        input[type="date"], input[type="file"]
+            {width: 10em ;}
+        input[type="color"]
+            {width: 5em;}
+        .submitButtonArea
+            {background-color: rgba(255,255,255,0.9); /* This will mask the space around the submission button */
+            position: fixed; /* Of course, we'd like to have this under the button, which is also fixed to the bottom */
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10%;
+            width: 100%;
+            z-index: 1;} /* We'll make sure this element displays above others and behind the submission button */
+    }
+
+@media only screen
+    and (min-width: 700px)
+    and (max-width: 1500px) {
+        /* Common desktops and tablets */
+        .container
+            {width: 100%;}
+        
+        section
+            {margin: auto;
+            width: 80%;}
+        
+        /* Form Elements */
+        label[for="selfie"]
+            {position: relative;
+            top: auto;
+            right: -3.0117647059%;}
+        
+        .card
+            {margin: 2.5% ;
+            width: 17.22%;}
+        
+        /* Input */
+        input[type="submit"]
+            {background-color: #fc3ba6;
+            color: #fff;
+            padding: 0 12.4140625%;
+            margin: auto;
+            text-indent: 0;
+            transform: scale(1.4,1.4) rotate(-5deg) skew(-5deg);
+            width: 100%;
+            transition: transform 375ms 0ms ease-in-out, background-color 375ms 0ms ease-in-out, color 375ms 0ms ease-in-out;
+            z-index: 1;
+            outline: none;}
+        .submitButtonArea
+            {position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20%;
+            width: 100%;}
+    }
+
+@media only screen
+    and (min-width: 1500px) {
+        /* Larger displays */
+        .container
+            {width: 1500px;}
+        
+        /* Form Elements */
+        label[for="selfie"]
+            {position: relative;
+            top: auto;
+            right: -3.0117647059%;}
+        
+        .card
+            {margin: 2.5% ;
+            width: 17.22%;}
+        
+        /* Input */
+        input[type="submit"]
+            {background-color: #fc3ba6;
+            color: #fff;
+            padding: 0 12.4140625%;
+            margin: auto;
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            right: 0;
+            text-indent: 0;
+            transform: scale(1.4,1.4) rotate(-5deg) skew(-5deg);
+            width: 100%;
+            transition: transform 375ms 0ms ease-in-out, background-color 375ms 0ms ease-in-out, color 375ms 0ms ease-in-out;
+            z-index: -1;
+            outline: none;}
+    }
